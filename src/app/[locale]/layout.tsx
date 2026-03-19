@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Inter, Playfair_Display, Noto_Kufi_Arabic } from 'next/font/google';
 import { locales } from '@/i18n';
 import { Toaster } from 'react-hot-toast';
 import Navbar from '@/components/layout/Navbar';
@@ -9,6 +10,28 @@ import Footer from '@/components/layout/Footer';
 import CartDrawer from '@/components/cart/CartDrawer';
 import StoreHydration from '@/components/providers/StoreHydration';
 import '../globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair-display',
+  display: 'swap',
+});
+
+const notoKufiArabic = Noto_Kufi_Arabic({
+  subsets: ['arabic'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-noto-kufi-arabic',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'LUMIÈRE - Women\'s Fashion',
@@ -32,15 +55,7 @@ export default async function LocaleLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang={locale} dir={dir} className={`${inter.variable} ${playfairDisplay.variable} ${notoKufiArabic.variable}`}>
       <body
         className={`min-h-screen ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}
         suppressHydrationWarning
