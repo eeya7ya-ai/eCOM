@@ -356,29 +356,17 @@ export default function ShopClient({ initialProducts, categories, locale, search
                 </button>
               </motion.div>
             ) : (
-              <motion.div
-                layout
+              <div
                 className={
                   viewMode === 'grid'
                     ? 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6'
                     : 'flex flex-col gap-4'
                 }
               >
-                <AnimatePresence>
-                  {filteredProducts.map((product, i) => (
-                    <motion.div
-                      key={product.id}
-                      layout
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ delay: i * 0.03 }}
-                    >
-                      <ProductCard product={product} locale={locale} index={i} />
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </motion.div>
+                {filteredProducts.map((product, i) => (
+                  <ProductCard key={product.id} product={product} locale={locale} index={i} />
+                ))}
+              </div>
             )}
           </div>
         </div>

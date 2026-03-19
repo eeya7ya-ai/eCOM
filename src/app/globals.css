@@ -37,22 +37,24 @@
 
   .gradient-bg {
     background: linear-gradient(-45deg, #ff9a9e, #fecfef, #ffecd2, #a18cd1, #fbc2eb, #a6c1ee);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.6);
+    will-change: auto;
   }
 
   .glass-dark {
-    background: rgba(26, 26, 46, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    will-change: auto;
   }
 
   .btn-primary {
@@ -64,13 +66,13 @@
   }
 
   .product-card {
-    @apply relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+    @apply relative overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-2xl;
+    transform: translateZ(0);
   }
 
   .card-glass {
-    @apply rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    @apply rounded-2xl shadow-xl transition-shadow duration-300 hover:shadow-2xl;
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.7);
   }
 
@@ -139,7 +141,7 @@
 .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
 .animate-slide-in-left { animation: slideInLeft 0.6s ease-out forwards; }
 .animate-slide-in-right { animation: slideInRight 0.6s ease-out forwards; }
-.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 .animate-float { animation: float 3s ease-in-out infinite; }
 .particle { position: absolute; border-radius: 50%; animation: particleFloat 6s ease-in-out infinite; }
 

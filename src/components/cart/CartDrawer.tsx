@@ -31,9 +31,9 @@ export default function CartDrawer() {
             initial={{ x: isRTL ? '-100%' : '100%' }}
             animate={{ x: 0 }}
             exit={{ x: isRTL ? '-100%' : '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
             className={`fixed top-0 ${isRTL ? 'left-0' : 'right-0'} h-full w-full sm:w-[420px] z-[80] flex flex-col`}
-            style={{ background: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(20px)' }}
+            style={{ background: 'rgba(255,255,255,0.98)' }}
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
