@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "cart": "Cart",
+    "language": "AR",
+    "categories": "Categories",
+    "dresses": "Dresses",
+    "clothes": "Clothes",
+    "accessories": "Accessories"
+  },
+  "home": {
+    "hero": {
+      "title": "Elegance Redefined",
+      "subtitle": "Discover the latest women's fashion collection",
+      "cta": "Shop Now",
+      "ctaSecondary": "View New Arrivals"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Our most loved pieces"
+    },
+    "categories": {
+      "title": "Shop by Category",
+      "subtitle": "Find exactly what you're looking for"
+    },
+    "newArrivals": {
+      "title": "New Arrivals",
+      "subtitle": "Fresh styles just landed"
+    }
+  },
+  "shop": {
+    "title": "Shop",
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "priceLowHigh": "Price: Low to High",
+    "priceHighLow": "Price: High to Low",
+    "category": "Category",
+    "size": "Size",
+    "color": "Color",
+    "priceRange": "Price Range",
+    "clearFilters": "Clear Filters",
+    "noProducts": "No products found",
+    "showing": "Showing",
+    "products": "products"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "size": "Size",
+    "color": "Color",
+    "quantity": "Quantity",
+    "selectSize": "Select a size",
+    "selectColor": "Select a color",
+    "description": "Description",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "shareProduct": "Share",
+    "relatedProducts": "You May Also Like"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptySubtitle": "Start shopping and add items to your cart",
+    "continueShopping": "Continue Shopping",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "freeShipping": "Free Shipping",
+    "calculateShipping": "Calculated at checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "customerInfo": "Customer Information",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "deliveryAddress": "Delivery Address",
+    "street": "Street Address",
+    "city": "City",
+    "governorate": "Governorate",
+    "postalCode": "Postal Code",
+    "shippingMethod": "Shipping Method",
+    "payment": "Payment",
+    "orderSummary": "Order Summary",
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "securePayment": "Secure Payment",
+    "backToCart": "Back to Cart",
+    "estimatedDelivery": "Estimated delivery"
+  },
+  "confirmation": {
+    "title": "Order Confirmed!",
+    "subtitle": "Thank you for your purchase",
+    "orderNumber": "Order Number",
+    "estimatedDelivery": "Estimated Delivery",
+    "continueShopping": "Continue Shopping",
+    "trackOrder": "Track Your Order",
+    "confirmationEmail": "A confirmation email has been sent to"
+  },
+  "tracking": {
+    "title": "Track Your Order",
+    "subtitle": "Enter your order details to track your shipment",
+    "orderNumber": "Order Number",
+    "email": "Email Address",
+    "trackButton": "Track Order",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+    "notFound": "Order not found. Please check your order number and email."
+  },
+  "footer": {
+    "description": "Discover the latest women's fashion with elegance and style.",
+    "quickLinks": "Quick Links",
+    "customerService": "Customer Service",
+    "contactUs": "Contact Us",
+    "trackOrder": "Track Order",
+    "returns": "Returns & Exchanges",
+    "faq": "FAQ",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "currency": "JOD"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "currency": "JOD",
+    "price": "{price} JOD"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "shipping": "Shipping",
+    "categories": "Categories",
+    "logout": "Logout",
+    "login": "Login",
+    "password": "Password",
+    "totalOrdersToday": "Orders Today",
+    "totalOrdersMonth": "Orders This Month",
+    "revenue": "Revenue",
+    "lowStock": "Low Stock Alerts",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "productList": "Product List",
+    "orderList": "All Orders",
+    "updateStatus": "Update Status",
+    "addTracking": "Add Tracking Number",
+    "shippingZones": "Shipping Zones",
+    "addZone": "Add Zone",
+    "categoryList": "Categories"
+  }
+}
