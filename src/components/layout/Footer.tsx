@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin, Heart } from 'lucide-react';
@@ -146,8 +147,8 @@ export default function Footer({ locale }: FooterProps) {
               <Heart size={12} className="text-rose-500 animate-pulse" />
             </p>
             <div className="flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" className="h-6 opacity-60 hover:opacity-100 transition-opacity" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 opacity-60 hover:opacity-100 transition-opacity" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" width={40} height={24} className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width={40} height={24} className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity" />
               <div className="flex items-center gap-1 text-gray-500 text-xs">
                 <span>Powered by</span>
                 <span className="text-purple-400 font-semibold">Stripe</span>

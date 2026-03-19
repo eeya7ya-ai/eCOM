@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Edit, Trash2, Eye, EyeOff, Upload, X, Check, AlertTriangle } from 'lucide-react';
+import { Plus, Edit, Trash2, Upload, X, Check, AlertTriangle } from 'lucide-react';
 import Image from 'next/image';
 import { formatPrice, slugify } from '@/lib/utils';
 import toast from 'react-hot-toast';

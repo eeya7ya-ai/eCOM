@@ -1,7 +1,7 @@
 'use client';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Filter, X, SlidersHorizontal, Search, Grid, List } from 'lucide-react';
+import { X, SlidersHorizontal, Search, Grid, List } from 'lucide-react';
 import ProductCard from '@/components/ui/ProductCard';
 
 interface ShopClientProps {

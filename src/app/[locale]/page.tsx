@@ -1,5 +1,4 @@
 export const dynamic = 'force-dynamic';
-import { Suspense } from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import CategorySection from '@/components/home/CategorySection';
 import FeaturedProducts from '@/components/home/FeaturedProducts';
@@ -8,7 +7,7 @@ import PromoBanner from '@/components/home/PromoBanner';
 import StatsSection from '@/components/home/StatsSection';
 import { db } from '@/lib/db';
 import { products, productTranslations, productImages, productVariants, categories, categoryTranslations } from '@/lib/db/schema';
-import { eq, and, inArray } from 'drizzle-orm';
+import { eq, and } from 'drizzle-orm';
 
 async function getFeaturedProducts() {
   try {

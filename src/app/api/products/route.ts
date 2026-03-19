@@ -3,17 +3,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import {
   products, productTranslations, productImages, productVariants,
-  categories, categoryTranslations
+  categories
 } from '@/lib/db/schema';
-import { eq, and, ilike, gte, lte, sql } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const category = searchParams.get('category');
     const search = searchParams.get('search');
-    const locale = searchParams.get('locale') || 'en';
-
     let result = await db.select().from(products).where(eq(products.isActive, true));
 
     if (category) {
