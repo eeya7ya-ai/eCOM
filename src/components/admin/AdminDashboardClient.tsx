@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ShoppingCart, DollarSign, Package, AlertTriangle, TrendingUp, Eye } from 'lucide-react';
+import { ShoppingCart, DollarSign, Package, AlertTriangle, Eye } from 'lucide-react';
 import { formatPrice, getStatusColor } from '@/lib/utils';
 import Link from 'next/link';
 

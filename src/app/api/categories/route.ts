@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ category: cat, success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed' }, { status: 500 });
   }
 }

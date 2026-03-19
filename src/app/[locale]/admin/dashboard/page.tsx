@@ -2,7 +2,7 @@ export const dynamic = 'force-dynamic';
 import AdminDashboardClient from '@/components/admin/AdminDashboardClient';
 import { db } from '@/lib/db';
 import { orders, products, productVariants } from '@/lib/db/schema';
-import { gte, eq, and, lte, lt, sql } from 'drizzle-orm';
+import { gte, eq, lt, sql } from 'drizzle-orm';
 
 async function getDashboardData() {
   try {

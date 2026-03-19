@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CartDrawer from '@/components/cart/CartDrawer';
+import StoreHydration from '@/components/providers/StoreHydration';
 import '../globals.css';
 
 export const metadata: Metadata = {
@@ -41,10 +42,11 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`min-h-screen bg-white ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}
+        className={`min-h-screen ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
+          <StoreHydration />
           <Navbar locale={locale} />
           <CartDrawer />
           <main className="pt-16">{children}</main>

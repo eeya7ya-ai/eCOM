@@ -62,7 +62,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     }
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to update' }, { status: 500 });
   }
 }
