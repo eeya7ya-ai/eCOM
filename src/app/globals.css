@@ -32,7 +32,7 @@
 
 @layer components {
   .font-arabic {
-    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-family: var(--font-noto-kufi-arabic), sans-serif;
   }
 
   .gradient-bg {
@@ -76,7 +76,7 @@
 
   .section-title {
     @apply text-4xl font-bold bg-gradient-to-r from-rose-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-playfair-display), serif;
   }
 
   .section-subtitle {

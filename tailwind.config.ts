@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        arabic: ['Noto Kufi Arabic', 'sans-serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        arabic: ['var(--font-noto-kufi-arabic)', 'sans-serif'],
+        display: ['var(--font-playfair-display)', 'Georgia', 'serif'],
       },
       colors: {
         rose: {
