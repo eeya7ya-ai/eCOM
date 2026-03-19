@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "cart": "السلة",
+    "language": "EN",
+    "categories": "الفئات",
+    "dresses": "فساتين",
+    "clothes": "ملابس",
+    "accessories": "إكسسوارات"
+  },
+  "home": {
+    "hero": {
+      "title": "أناقة بلا حدود",
+      "subtitle": "اكتشفي أحدث مجموعات الأزياء النسائية",
+      "cta": "تسوقي الآن",
+      "ctaSecondary": "الوصولات الجديدة"
+    },
+    "featured": {
+      "title": "المنتجات المميزة",
+      "subtitle": "أكثر قطعنا إعجاباً"
+    },
+    "categories": {
+      "title": "تسوقي حسب الفئة",
+      "subtitle": "اعثري على ما تبحثين عنه"
+    },
+    "newArrivals": {
+      "title": "وصولات جديدة",
+      "subtitle": "أحدث الأساليب وصلت للتو"
+    }
+  },
+  "shop": {
+    "title": "المتجر",
+    "filters": "الفلاتر",
+    "sortBy": "ترتيب حسب",
+    "newest": "الأحدث",
+    "priceLowHigh": "السعر: من الأقل للأعلى",
+    "priceHighLow": "السعر: من الأعلى للأقل",
+    "category": "الفئة",
+    "size": "المقاس",
+    "color": "اللون",
+    "priceRange": "نطاق السعر",
+    "clearFilters": "مسح الفلاتر",
+    "noProducts": "لا توجد منتجات",
+    "showing": "عرض",
+    "products": "منتجات"
+  },
+  "product": {
+    "addToCart": "أضف للسلة",
+    "outOfStock": "نفد المخزون",
+    "size": "المقاس",
+    "color": "اللون",
+    "quantity": "الكمية",
+    "selectSize": "اختاري مقاساً",
+    "selectColor": "اختاري لوناً",
+    "description": "الوصف",
+    "inStock": "متوفر",
+    "lowStock": "مخزون منخفض",
+    "shareProduct": "مشاركة",
+    "relatedProducts": "قد يعجبك أيضاً"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلتك فارغة",
+    "emptySubtitle": "ابدئي التسوق وأضيفي عناصر إلى سلتك",
+    "continueShopping": "مواصلة التسوق",
+    "remove": "حذف",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "total": "الإجمالي",
+    "checkout": "إتمام الشراء",
+    "freeShipping": "شحن مجاني",
+    "calculateShipping": "يُحسب عند الدفع"
+  },
+  "checkout": {
+    "title": "إتمام الشراء",
+    "customerInfo": "معلومات العميل",
+    "name": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "deliveryAddress": "عنوان التوصيل",
+    "street": "عنوان الشارع",
+    "city": "المدينة",
+    "governorate": "المحافظة",
+    "postalCode": "الرمز البريدي",
+    "shippingMethod": "طريقة الشحن",
+    "payment": "الدفع",
+    "orderSummary": "ملخص الطلب",
+    "placeOrder": "إتمام الطلب",
+    "processing": "جاري المعالجة...",
+    "securePayment": "دفع آمن",
+    "backToCart": "العودة للسلة",
+    "estimatedDelivery": "التسليم المتوقع"
+  },
+  "confirmation": {
+    "title": "تم تأكيد طلبك!",
+    "subtitle": "شكراً لتسوقك معنا",
+    "orderNumber": "رقم الطلب",
+    "estimatedDelivery": "موعد التسليم المتوقع",
+    "continueShopping": "مواصلة التسوق",
+    "trackOrder": "تتبع طلبك",
+    "confirmationEmail": "تم إرسال بريد تأكيد إلى"
+  },
+  "tracking": {
+    "title": "تتبع طلبك",
+    "subtitle": "أدخل تفاصيل طلبك لتتبع شحنتك",
+    "orderNumber": "رقم الطلب",
+    "email": "البريد الإلكتروني",
+    "trackButton": "تتبع الطلب",
+    "status": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "shipped": "تم الشحن",
+      "delivered": "تم التسليم"
+    },
+    "notFound": "لم يتم العثور على الطلب. يرجى التحقق من رقم الطلب والبريد الإلكتروني."
+  },
+  "footer": {
+    "description": "اكتشفي أحدث الأزياء النسائية بأناقة وأسلوب راقي.",
+    "quickLinks": "روابط سريعة",
+    "customerService": "خدمة العملاء",
+    "contactUs": "تواصل معنا",
+    "trackOrder": "تتبع الطلب",
+    "returns": "الإرجاع والاستبدال",
+    "faq": "الأسئلة الشائعة",
+    "followUs": "تابعونا",
+    "rights": "جميع الحقوق محفوظة.",
+    "currency": "د.أ"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ ما",
+    "retry": "حاول مجدداً",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "currency": "د.أ",
+    "price": "{price} د.أ"
+  },
+  "admin": {
+    "title": "لوحة الإدارة",
+    "dashboard": "لوحة التحكم",
+    "products": "المنتجات",
+    "orders": "الطلبات",
+    "shipping": "الشحن",
+    "categories": "الفئات",
+    "logout": "تسجيل الخروج",
+    "login": "تسجيل الدخول",
+    "password": "كلمة المرور",
+    "totalOrdersToday": "طلبات اليوم",
+    "totalOrdersMonth": "طلبات هذا الشهر",
+    "revenue": "الإيرادات",
+    "lowStock": "تنبيهات المخزون المنخفض",
+    "addProduct": "إضافة منتج",
+    "editProduct": "تعديل المنتج",
+    "deleteProduct": "حذف المنتج",
+    "productList": "قائمة المنتجات",
+    "orderList": "جميع الطلبات",
+    "updateStatus": "تحديث الحالة",
+    "addTracking": "إضافة رقم التتبع",
+    "shippingZones": "مناطق الشحن",
+    "addZone": "إضافة منطقة",
+    "categoryList": "الفئات"
+  }
+}
