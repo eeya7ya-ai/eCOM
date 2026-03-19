@@ -93,22 +93,16 @@ export default function CategorySection({ categories, locale }: CategorySectionP
                   className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${config.bg} ${config.hoverBg} transition-all duration-500 shadow-lg hover:shadow-2xl cursor-pointer h-72`}
                 >
                   {/* Background decoration */}
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+                  <div
                     className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full opacity-20"
                     style={{ background: `linear-gradient(135deg, transparent, currentColor)` }}
                   />
 
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
                     {/* Emoji */}
-                    <motion.div
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: index * 0.5 }}
-                      className="text-7xl mb-5 drop-shadow-lg"
-                    >
+                    <div className="text-7xl mb-5 drop-shadow-lg">
                       {config.emoji}
-                    </motion.div>
+                    </div>
 
                     {/* Category name */}
                     <h3

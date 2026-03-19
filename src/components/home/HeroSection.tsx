@@ -55,10 +55,10 @@ export default function HeroSection({ locale }: HeroProps) {
 
   useEffect(() => {
     setParticles(
-      [...Array(15)].map(() => ({
+      [...Array(5)].map(() => ({
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 8 + 3,
+        size: Math.random() * 6 + 3,
         delay: Math.random() * 5,
         color: ['#f472b6', '#a78bfa', '#fbbf24', '#fb7185', '#c084fc'][Math.floor(Math.random() * 5)],
       }))
@@ -81,11 +81,11 @@ export default function HeroSection({ locale }: HeroProps) {
         />
       </AnimatePresence>
 
-      {/* Floating Particles */}
+      {/* Floating Particles - CSS only */}
       {particles.map((p, i) => (
-        <motion.div
+        <div
           key={i}
-          className="absolute rounded-full opacity-60"
+          className="absolute rounded-full animate-float opacity-60"
           style={{
             left: `${p.x}%`,
             top: `${p.y}%`,
@@ -93,31 +93,17 @@ export default function HeroSection({ locale }: HeroProps) {
             height: p.size,
             background: p.color,
             animationDelay: `${p.delay}s`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 10, -10, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.6, 1, 0.6],
-          }}
-          transition={{
-            duration: 4 + p.delay,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            animationDuration: `${4 + p.delay}s`,
           }}
         />
       ))}
 
-      {/* Large decorative circles */}
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], rotate: [0, 10, 0] }}
-        transition={{ duration: 8, repeat: Infinity }}
+      {/* Large decorative circles - static, no continuous animation */}
+      <div
         className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-20"
         style={{ background: 'radial-gradient(circle, #f472b6, transparent)' }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.2, 1], rotate: [0, -15, 0] }}
-        transition={{ duration: 10, repeat: Infinity }}
+      <div
         className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full opacity-20"
         style={{ background: 'radial-gradient(circle, #a78bfa, transparent)' }}
       />
@@ -228,12 +214,10 @@ export default function HeroSection({ locale }: HeroProps) {
           >
             {/* Main visual */}
             <div className="relative mx-auto w-80 h-96 sm:w-96 sm:h-[500px]">
-              {/* Decorative rings */}
+              {/* Decorative rings - static */}
               {[1, 2, 3].map((ring) => (
-                <motion.div
+                <div
                   key={ring}
-                  animate={{ rotate: ring % 2 === 0 ? 360 : -360 }}
-                  transition={{ duration: 20 + ring * 5, repeat: Infinity, ease: 'linear' }}
                   className="absolute inset-0 rounded-full border-2 border-dashed opacity-20"
                   style={{
                     borderColor: ring === 1 ? '#f472b6' : ring === 2 ? '#a78bfa' : '#fbbf24',
@@ -243,10 +227,8 @@ export default function HeroSection({ locale }: HeroProps) {
               ))}
 
               {/* Central card */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-8 rounded-3xl overflow-hidden shadow-2xl"
+              <div
+                className="absolute inset-8 rounded-3xl overflow-hidden shadow-2xl animate-float"
               >
                 <div className={`w-full h-full bg-gradient-to-br ${slide.gradient} flex items-center justify-center`}>
                   <div className="text-center text-white p-8">
@@ -259,7 +241,7 @@ export default function HeroSection({ locale }: HeroProps) {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating badges */}
               {[
@@ -301,16 +283,14 @@ export default function HeroSection({ locale }: HeroProps) {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="absolute bottom-8 right-8 flex flex-col items-center gap-1 text-gray-400"
+      <div
+        className="absolute bottom-8 right-8 flex flex-col items-center gap-1 text-gray-400 animate-float"
       >
         <p className="text-xs uppercase tracking-widest" style={{ writingMode: 'vertical-rl' }}>
           {isRTL ? 'تمرير' : 'Scroll'}
         </p>
         <div className="w-px h-10 bg-gradient-to-b from-gray-400 to-transparent" />
-      </motion.div>
+      </div>
     </section>
   );
 }

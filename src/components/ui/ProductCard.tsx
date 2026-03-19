@@ -70,9 +70,9 @@ export default function ProductCard({ product, locale, index = 0 }: ProductCardP
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
+      transition={{ delay: Math.min(index * 0.03, 0.3) }}
       className="product-card group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -85,8 +85,10 @@ export default function ProductCard({ product, locale, index = 0 }: ProductCardP
               src={primaryImage}
               alt={translation?.title || ''}
               fill
-              className={`object-cover transition-all duration-700 ${
-                isHovered && secondaryImage ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
+              loading={index < 4 ? 'eager' : 'lazy'}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className={`object-cover transition-opacity duration-500 ${
+                isHovered && secondaryImage ? 'opacity-0' : 'opacity-100'
               }`}
             />
           ) : (
@@ -95,14 +97,13 @@ export default function ProductCard({ product, locale, index = 0 }: ProductCardP
             </div>
           )}
 
-          {secondaryImage && (
+          {secondaryImage && isHovered && (
             <Image
               src={secondaryImage}
               alt={translation?.title || ''}
               fill
-              className={`object-cover transition-all duration-700 absolute inset-0 ${
-                isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-              }`}
+              loading="lazy"
+              className="object-cover transition-opacity duration-500 absolute inset-0 opacity-100"
             />
           )}
 

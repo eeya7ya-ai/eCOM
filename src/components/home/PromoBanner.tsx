@@ -19,29 +19,24 @@ export default function PromoBanner({ locale }: PromoBannerProps) {
         className="relative overflow-hidden rounded-3xl"
         style={{
           background: 'linear-gradient(-45deg, #f43f5e, #ec4899, #a855f7, #8b5cf6)',
-          backgroundSize: '400% 400%',
-          animation: 'gradientShift 8s ease infinite',
+          backgroundSize: '200% 200%',
+          animation: 'gradientShift 15s ease infinite',
         }}
       >
-        {/* Decorative elements */}
+        {/* Decorative elements - reduced for performance */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
+          {['✨', '💫', '🌸'].map((emoji, i) => (
+            <div
               key={i}
-              animate={{
-                y: [0, -30, 0],
-                x: [0, 15, -15, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{ duration: 5 + i, repeat: Infinity, delay: i * 0.5 }}
-              className="absolute text-4xl select-none"
+              className="absolute text-4xl select-none animate-float opacity-50"
               style={{
-                left: `${10 + i * 12}%`,
-                top: `${10 + (i % 3) * 30}%`,
+                left: `${15 + i * 30}%`,
+                top: `${15 + (i % 2) * 40}%`,
+                animationDelay: `${i * 1.5}s`,
               }}
             >
-              {['✨', '🌸', '💫', '🌟', '💎', '🌺', '💜', '🎀'][i]}
-            </motion.div>
+              {emoji}
+            </div>
           ))}
         </div>
 

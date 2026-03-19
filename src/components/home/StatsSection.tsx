@@ -22,14 +22,16 @@ function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
 
   useEffect(() => {
     if (!started) return;
-    let start = 0;
-    const increment = end / (duration * 60);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) { setCount(end); clearInterval(timer); }
-      else setCount(Math.floor(start));
-    }, 1000 / 60);
-    return () => clearInterval(timer);
+    let startTime: number | null = null;
+    let rafId: number;
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) rafId = requestAnimationFrame(animate);
+    };
+    rafId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafId);
   }, [started, end, duration]);
 
   return <span ref={ref}>{count.toLocaleString()}</span>;
